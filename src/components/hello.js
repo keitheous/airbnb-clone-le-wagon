@@ -5,7 +5,8 @@ import React from 'react';
 class Hello extends React.Component {
   render() {
     // render method returns a html string in JXS
-    return <div>Hello!</div>;
+    // Interpolation in JSX is curly braces (return level) inside another curly braces (render level)
+    return <div>Hello {this.props.firstName} {this.props.lastName}!</div>;
 
   }
 }
