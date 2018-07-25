@@ -3,10 +3,20 @@ import './flat.css';
 
 class Flat extends React.Component {
   render() {
+    // https://github.com/lewagon/flats-boilerplate
+    const title = this.props.flat.price
+      + this.props.flat.priceCurrency + '-' + this.props.flat.name;
+
+
+    const style = {
+      backgroundImage: `url('${this.props.flat.imageUrl}')`  // using Template Literals ES6 - Ruby's version of interpolation
+      // backgroundImage: "url('" + this.props.flat.imageUrl + "')"; //without modern javascript, using concat
+    }
+
     return (
       <div className='flat'>
-        <div className='flat-picture'>picture</div>
-        <div className='flat-title'>title</div>
+        <div className='flat-picture' style={style}></div>
+        <div className='flat-title'>{title}</div>
       </div>
     );
   }
