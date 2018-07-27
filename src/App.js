@@ -15,7 +15,7 @@ class App extends Component {
       "lng": 2.346890
     } // https://github.com/lewagon/flats-boilerplate/blob/master/flats.json
 
-    const flats = [flat, flat, flat, flat, flat]
+    const flats = [flat, flat]
 
     return (
       <div>
@@ -25,10 +25,7 @@ class App extends Component {
             <div className = 'search'></div>
 
             <div className = 'flats'>
-
-              {flats.map(function(flat){
-                return <Flat flat = {flat} />
-              })}
+              {flats.map((flat) => <Flat flat = {flat} />)}
             </div>
           </div>
 
