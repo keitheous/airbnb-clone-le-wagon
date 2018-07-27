@@ -15,6 +15,8 @@ class App extends Component {
       "lng": 2.346890
     } // https://github.com/lewagon/flats-boilerplate/blob/master/flats.json
 
+    const flats = [flat, flat, flat, flat, flat]
+
     return (
       <div>
         <div className = 'app'>
@@ -23,9 +25,10 @@ class App extends Component {
             <div className = 'search'></div>
 
             <div className = 'flats'>
-              <Flat flat = {flat}/>
-              <Flat flat = {flat}/>
-              <Flat flat = {flat}/>
+
+              {flats.map(function(flat){
+                return <Flat flat = {flat} />
+              })}
             </div>
           </div>
 
@@ -36,5 +39,7 @@ class App extends Component {
     );
   }
 }
+
+// <Flat flat = {flat}/> x 3 is transformed into line 18 and 29-31
 
 export default App;
