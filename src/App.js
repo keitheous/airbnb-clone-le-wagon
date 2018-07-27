@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 // import logo from './logo.svg';
 import './App.css';
 import Flat from './components/flat'
@@ -37,6 +38,12 @@ class App extends Component {
     // } // https://github.com/lewagon/flats-boilerplate/blob/master/flats.json
     //
     // const flats = [flat, flat]
+
+    const center = {
+      lat: 48.8566,
+      lng: 2.3522
+    }
+
     return (
       <div>
         <div className = 'app'>
@@ -50,6 +57,11 @@ class App extends Component {
           </div>
 
           <div className = 'map'>
+            <GoogleMapReact
+              center={center}
+              zoom={11}
+            >
+            </ GoogleMapReact>
           </div>
         </div>
       </div>
