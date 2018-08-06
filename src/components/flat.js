@@ -2,6 +2,8 @@ import React from 'react';
 import './flat.css';
 
 class Flat extends React.Component {
+  handleClick = () => this.props.selectFlat(this.props.flat);
+
   render() {
     // https://github.com/lewagon/flats-boilerplate
     const title = this.props.flat.price
@@ -14,7 +16,7 @@ class Flat extends React.Component {
     }
 
     return (
-      <div className='flat'>
+      <div className='flat' onClick={this.handleClick}>
         <div className='flat-picture' style={style}></div>
         <div className='flat-title'>{title}</div>
       </div>
